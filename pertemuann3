@@ -1,0 +1,168 @@
+# Jawaban 2.3.3
+1.  Base case kasus terbaik terjadi bila pivot adalah median sedemikian sehingga kedua upatabel berukuran relative sama setiap kali pempartisian.
+Worst case kasus ini terjadi bila pada setiap partisi pivot selalu elemen maksimum (atau elemen minimum) table.
+2. A. Divide: membagi masalah menjadi beberapa upa- masalah yang memiliki kemiripan dengan masalah semula namun berukuran lebih kecil
+B. Conquer: memecahkan masing-masing upa- masalah
+C. Combine: menggabungkan solusi masing-masing upa masalah sehingga membentuk solusi masalah semula.
+3.  int i = 1;
+        while (i <=n ){
+            faktor = faktor * i;
+            i++;
+            Bisa menggunakan while
+4. finish = System.nanoTime();
+            System.out.println("waktu eksekusi program adalah : " + finish);
+            System.out.println("==============================");
+5.================================
+Masukkan Jumlah Elemen yang ingin di hitung : 2
+Masukkan nilai data ke -1 : 
+12
+Masukkan nilai data ke -2 : 
+9
+===========================
+Hasil Faktorial dengan Brute Force
+Faktorial dari nilai 12 adalah : 479001600
+Faktorial dari nilai 9 adalah : 362880
+Waktu eksekusi Program adalah : 5.56837125330599E14
+=============================
+Hasil Faktorial dengan divide and conquer
+faktorial dari nilai 12 adalah : 479001600
+faktorial dari nilai 9 adalah : 362880
+waktu eksekusi program adalah : 5.568371408964E14
+==============================
+ ================================
+Masukkan Jumlah Elemen yang ingin di hitung : 2
+Masukkan nilai data ke -1 : 
+23
+Masukkan nilai data ke -2 : 
+25
+===========================
+Hasil Faktorial dengan Brute Force
+Faktorial dari nilai 23 adalah : 862453760
+Faktorial dari nilai 25 adalah : 2076180480
+Waktu eksekusi Program adalah : 5.567578196103E14
+=============================
+Hasil Faktorial dengan divide and conquer
+faktorial dari nilai 23 adalah : 862453760
+faktorial dari nilai 25 adalah : 2076180480
+waktu eksekusi program adalah : 5.567578334312E14
+==============================
+
+Terjadi perbedaan waktu
+
+# jawaban 2.4.3
+1. PangkatBF() = int hasil akan menguadratkan suatu bilangan dengan hasil = hasil * a dan i< n yang menggunakan fungsi biasa
+  pangkatDC() = menggunakan nilai rekursif.
+2. If (n==0) artinya akan melakukan bilangan ganjil yang akan dipangkatkan sesuai nilai yang dimasukkan
+ If (n%2 == 1) artinya akan melakukan bilangan genap yang akan dipangkatkan sesuai nilai yang dimasukkan
+3. sudah 
+4.  public pangkat(){
+        
+    } 
+    public pangkat(int nilai1, int pangkat1){
+        nilai = nilai1;
+        pangkat = pangkat1;
+        png[i] = new pangkat();
+
+            System.out.print("masukkan nilai yang akan dipangkatkan ke-"+(i+1)+" : ");
+            png[i].nilai =sc.nextInt();
+            System.out.print("Masukkan nilai pemangkat ke-"+(i+1)+" : ");
+            png[i].pangkat=sc.nextInt();
+            png[i]= new pangkat(png[i].nilai,png[i].pangkat);
+5.         System.out.println("menu\n1.pangkatBF \n2.pangkatDC");
+        int pilihan = sc.nextInt();
+        if(pilihan==1){
+        System.out.println("==================================");
+        System.out.println("Hasil pangkat dengan Brute Force ");
+        for(int i=0; i<elemen; i++){
+            System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah "+png[i].PangkatBF(png[i].nilai,png[i].pangkat));
+            
+        }
+        }
+        else{
+        System.out.println("==================================");
+        System.out.println("Hasil Pangkat dengan Divide and Conquer");
+        for(int i=0; i<elemen; i++){
+            System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah "+png[i].pangkatDC(png[i].nilai,png[i].pangkat));
+            
+        }
+        }
+# 2.5.3
+ 1. apabila menggunakan totalBF() dia akan menghitung secara urut
+Sedangkan apabila menggunakan totalDC() dia akan membagi hitungan menjadi bagian kecil
+2. dengan system.out.printf
+3. Kode program tersebut adalah combine dari divide and conquer yaitu
+fungsi TotalDC itu sendiri, dimana fungsi digunakan untuk menggabungkan
+kembali pemecahan masalah tadi yang telah di conquer sebelumnya.(Hasil akhir
+dari proses tersebut dan untuk menampilkan outputnya)
+4. Variabel mid berfungsi untuk mengetahui nilai tengah dari array arr[ ] yang
+dimana fungsi program mid ini yang mencari keuntungan perbulan yang
+didapatkan.(keuntungan perbulan yang didapatkan).
+5. /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package minggu.pkg3;
+import java.util.Locale;
+import java.util.Scanner;
+
+/**
+ *
+ * @author ikafa
+ */
+public class sum {
+ public int elemen;
+ public double keuntungan[];
+ public double total;
+ sum (int elemen){
+     this.elemen = elemen;
+     this.keuntungan = new double[elemen];
+     this.total=0; 
+ }
+ 
+ double totalBF(double arr[]){
+     for(int i=0; i<elemen; i++){
+         total = total+arr[i];
+     }
+     return total;
+ }
+ double totalDC(double arr[], int l, int r){
+     if(l==r)
+         return arr[l];
+     else if(l<r){
+         int mid=(l+r)/2;
+         double lsum=totalDC(arr, l, mid-1);
+         double rsum=totalDC(arr, mid+1, r);
+         return lsum+rsum+arr[mid];
+     }
+     return 0;
+ }
+    
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("=================================");
+        System.out.println("Menghitung keuntungan total");
+        System.out.println("=================================");
+        System.out.print("masukkan jumlah perusahaan");
+        int elm = sc.nextInt();
+        for(int i=0; i<elm; i++){
+            System.out.println("================================");
+            System.out.println("perusahaan ke-"+(i+1));
+            System.out.println("masukkan jumlah bulan");
+            int ku = sc.nextInt();
+            
+        }
+        sum sm = new sum(elm);
+        System.out.println("======================================");
+        for(int i=0; i<sm.elemen;i++){
+            System.out.print("masukkan untung bulan ke-"+(i+1)+" = ");
+            sm.keuntungan[i]=sc.nextDouble();
+        }
+        System.out.println("======================================");
+        System.out.println("Algoritmma Brute Force");
+        System.out.println("Total keuntungan perusahaan selama "+sm.elemen+" bulan adalah "+sm.totalBF(sm.keuntungan));
+        System.out.println("======================================");
+        System.out.println("Algoritma Divide Conquer");
+        System.out.println("Total keuntungan perusahaan selama "+sm.elemen+" bulan adalah "+sm.totalDC(sm.keuntungan, 0, sm.elemen-1));
+    }
+}
