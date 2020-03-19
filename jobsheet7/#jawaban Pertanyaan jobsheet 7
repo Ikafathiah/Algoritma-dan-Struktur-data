@@ -1,0 +1,19 @@
+#jawaban Pertanyaan jobsheet 7
+
+pertanyaan 1.4.1
+1. Kode program tersebut adalah method dengan nama Searching dengan 2 parameter yaitu Data bertipe array integer dan jmlData betipe integer. Kemudian variabel jumdata bernilai sama dengan jmlData. Kemudian variabel data yang bertipe array integer nilainya akan sama dengan jumlah isi array dengan jmlData. Perulangan berfungsi untuk mengidentifikasi nilai array. Dimana data[i] akan berulanga sebanyak 8 kali yang dimulai dari 0, kemudian Data[i] akan terisi nilai yang sama dengan nilai array 
+2. Fungsi break digunakan untuk menghentikan pencarian apabila data yang dicari telah ditemukan  
+3. Program masih bisa berjalan serta hasil yang dikeluarkan adalah bear. Hal ini dikarenakan cara yang digunakan adalah ssequential search sehigga pencarian akan dilakukan secara berurutan dari depan ke paling belakang. Dalam program data yang dicari adalah 30, maka program akan melakukakan pencarian dari elemen pertama hingga ditemukan data yang bernilai 30
+
+pertanyaan1.4.2
+
+1.mid = (left + right) / 2;
+2. else if(data[mid] > cari){
+                return FindBinarySearch(cari,left, mid-1);
+            }
+            else{
+                return FindBinarySearch(cari, mid+1, right);
+3. Data tidak sesuai. Karena metode pencarian yang digunakan adalah Binary Search maka yang harus dilakukan adalah dengan mengurutkan data di dalam array terlebih dahulu.
+int data[] = {30,40,50,60,70,80,90,100};
+4.Untuk pencarian dengan Binary Search pencarian untuk nilai 30 tidak dapat ditemukan karena nilai di dalam array belum terurut dari nilai terkecil ke nilai tertinggi 
+5. 
