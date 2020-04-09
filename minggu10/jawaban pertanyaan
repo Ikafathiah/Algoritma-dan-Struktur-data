@@ -1,0 +1,20 @@
+jawaban pertanyaan 
+1. Q : variabel untuk menyimpan data queue
+2. FRONT : variabel untuk menyimpan nilai indeks array data   
+   terdepan
+   REAR : variabel untuk menyimpan nilai indeks array data paling belakang
+   SIZE : variabel untuk menyimpan berapa banyak data yang ada dalam antrian
+   MAX : variabel untuk menyimpan banyak data maksimal yang bisa disimpan di dalam queue
+3. karena nilai-1 tidak merujuk pada data manapun
+4. maka batas dari banyak elemen adalah max-1 karena queue dalam kondisi penuh jika max-1
+5. untuk mengecek apakah posisi rear  berada pada index terakhir array. jika benar,maka posisi rear selanjutnya adalah di index 0
+6. rear==max-1;
+7. karena method Dequeu akan menambahkan nilai yang kan dikembalikan lagi
+8. else{
+	front++;
+}
+9. untuk mengecek posisi front berada di indeks terakhir. jika benar maka front diletakkan di indeks 0
+10. data=Q[front];
+11. karena front merupakan data terdepan dari queue
+12. apabila dilakukan pengulangan maka akan digunkana rumus tersebut untuk menampilkan data  dalam queue
+13. 
