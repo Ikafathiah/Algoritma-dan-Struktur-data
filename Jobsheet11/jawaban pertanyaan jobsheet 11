@@ -1,0 +1,166 @@
+jawaban pertanyaan jobsheet 11
+1. agar head tidak berubah ketika penambahan data baru karena data baru tetap menempati tmp
+2. tidak bisa ditambahkan data baru di belakang
+3.
+di class LinkedList
+ void addByValue(int cari, int item)throws Exception{
+	boolean a= true;
+	Node tmp= head;
+	while(tmp.data != cari){
+	tmp=tmp.next;
+	}
+	tmp.next= new Node(item,null);
+	size++;
+}
+
+di class LinkedListMain
+System.out.println("Add by value");
+data.addByValue(1,3);
+data.print();
+
+4. 
+di class LinkedList
+
+void removeValue(int data)throws Exception{
+	Node Prev= head;
+	Node cur= head.next;
+	for(int i=1; i<size; i++){
+	if(data != prev.data){
+	prev=prev;
+	cur=prev.next;
+	}
+	}
+	prev.next=cur.next;
+	size--;
+
+di class LinkedListMain
+System.out.println("Remove by Value");
+data.removeValue(8);
+data.print();
+
+5.      static void menu(){
+        System.out.println("=========================");
+        System.out.println("           Menu          ");
+        System.out.println("=========================");
+        System.out.println("1. tambah\n2.hapus\n3.cari\n4.print\nkeluar ");
+        System.out.println("========================="); 
+    }
+    static void menu1(){
+        System.out.println("=========================");
+        System.out.println("         Tambah          ");
+        System.out.println("=========================");
+        System.out.println("1. tambah(first)\n2.tambah(index)\n3.tambah(last)\n4.kembali");
+        System.out.println("========================="); 
+    }
+    static void menu2(){
+        System.out.println("=========================");
+        System.out.println("           Hapus          ");
+        System.out.println("=========================");
+        System.out.println("1. hapus(index)\n2.hapus(key)\n3.clear\n4.kembali ");
+        System.out.println("========================="); 
+    }
+    static void menu3(){
+        System.out.println("=========================");
+        System.out.println("           Cari          ");
+        System.out.println("=========================");
+        System.out.println("1.cari(index)\n2.cari(key)\n3.kembali ");
+        System.out.println("========================="); 
+    }
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+     LinkedList data= new LinkedList();
+     int pilih;
+     do{
+         menu();
+         int pilih1;
+         int pilih2;
+         int pilih3;
+         
+         System.out.println("Pilih menu");
+         pilih=sc.nextInt();
+         
+         switch(pilih){
+             case 1:
+                 do{
+                     menu1();
+                     System.out.println("Pilih menu");
+                     pilih1=sc.nextInt();
+                     switch(pilih1){
+                         case 1:
+                             System.out.println("masukkan data pertama");
+                             int data1=sc.nextInt();
+                             data.addFirst(data1);
+                             break;
+                         case 2 :
+                             System.out.println("masukkan index yang ingin anda isi");
+                             int index1=sc.nextInt();
+                             System.out.println("Masukkan isi index");
+                             int data2=sc.nextInt();
+                             try{
+                                 data.add(data2,(index1-1));
+                             }
+                             catch(Exception e){
+                                 System.out.println(e.getMessage());
+                             }
+                             break;
+                         case 3:
+                             System.out.println("Masukkan data index terakhir");
+                             int data3=sc.nextInt();
+                             data.addLast(data3);
+                             data.print();
+                             break;
+                     }
+                     }while(pilih==1 || pilih==2 || pilih==3);
+                     break;
+                     case 2:
+                     do{
+                     menu2();
+                     System.out.println("pilih menu :");
+                     pilih2= sc.nextInt();
+                     try{
+                     data.remove(hapus);
+                     
+                 }
+                 catch(Exception e){
+                 System.out.println(e.getMessage());
+                 }
+                 break;
+                 case 2 :
+                 System.out.println("Masukkan index yang ingin dihapus");
+                 int hapus2=sc.nextInt();
+                 try{
+                 data.removeValue(hapus2);
+                 }
+                 catch(Exception e){
+                 System.out.println(e.getMessage());
+                 }
+                 break;
+                 case 3:
+                 data.clear();
+                 break;
+                 }
+                 }while(pilih2==1||pilih2==2||pilih2==3);
+                 break;
+             case 3:
+                 do{
+                     menu3();
+                     System.out.println("pilih menu");
+                     pilih3=sc.nextInt();
+                     switch(pilih3){
+                         case 1:
+                             System.out.println("masukkan index yang anda cari");
+                             int cari=sc.nextInt();
+                             data.cariindex(cari);
+                             break;
+                             
+                         case 2:
+                             System.out.println("masukkan data yang anda cari");
+                             int cari2=sc.nextInt();
+                             data.cariKey(cari2);
+                             break;
+                     }
+     }
+     }
+     }
+
+}
