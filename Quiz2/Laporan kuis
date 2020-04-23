@@ -1,0 +1,11 @@
+Laporan kuis
+1. nama : Ika Fathiah
+   nim : 1941720002
+2. <img src="1.jpg" />
+<img src="2.jpg" />
+<img src="3.jpg" />
+<img src="4.jpg" />
+3.<img src="flowchart.jpg" />
+
+
+Terdapat sebuah program linkedlist dengan studi kaaua pariwiata dan terdpat menu create, read, delete dan exit. dalam program ini terdapat method input() bulan dan tahun, method view() untuk menampilkan nilai, class linkedlist, method add() untuk menambahkan objek, method removeFirst() untuk menghapus data awal dan removeLast untuk menghapus data akhir.pada program ini user diminta untuk menginputka bulan kemudian data pertahun yang akan ditampilkan dalam bentuk tabel.
