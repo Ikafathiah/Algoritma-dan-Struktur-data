@@ -1,0 +1,26 @@
+#jawaban pertanyaan pertemuan15
+
+1.  Karena, pada adjency List graph memiliki 2 pointer sama seperti double linked list
+2. Pengulangan yang pertama digunakan untuk vertex yang
+terhubung dengan beberapa intasan, sedangkan perulangan yang kedua digunakan untuk urutan dari lintasan vertex terhubung dengan lintasanyang lain.
+3.  Graph digunakan untuk mempresentasikan objek-objek diskrit
+dan hubungan antara objek-objek tersebut. Sedangkan Binary Tree maksimal terhubung dengan 2 lintasan.
+4. Lintasan (path) adalah urutan dari lintasan (edge). Contohnya lintasan J ke P, yang dapat kita sebut sebagai lintasan (path) JBCP adalah lintasan (path) dari simpul J ke P. Lintasan (Edge) Garis-garis penghubung antar simpul dalam graph disebut dengan lintasan (edge).
+5. Implementasi graph (1)Graf tak berarah (undirected graph)
+yaitu Graf yang sisinya tidak mempunyai orientasi arah disebut graf tak berarah. (2) Graf Berarah (directed graph) Graf yang setiap sisinya
+memiliki orientasi arah disebut sebagai graf berarah. (3) Graph Weight.
+6. - Algoritma Breadth-first search adalah algoritma yang digunakan untuk melakukan pencarian secara melebar.
+- Algoritma Depth First Search, digunakan untuk pencarian secara mendalam.
+- Algoritma Kruskal adalah algoritma yand digunakan untuk mencari pohon merentang minimum secara langsung didasarkan pada algoritma MST (Minimum Spanning Tree) umum.
+7. Digunakan untuk membuat array bertipe data node.
+8.  Pada undirect graph, degree pada node ditentukan
+berdasarkan hubungan (terhubung/tidak), dan pada direct graph
+degree node ditentukan berdasarkan arah dari hubungan tersebut.
+9.  karena inputnya harus berada di depan node supaya sesuai
+dengan urutan.
+10. menggunakan method removeEdge();
+11. graph.removeEdge(1, 3);
+	graph.printGraph()
+12. karena dimulai dari index ke 1
+13. digunakan untuk menentukan nilai dari edge ada atau tidak ada
+14. adjency matrix undirected
